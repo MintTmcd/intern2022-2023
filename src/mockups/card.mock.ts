@@ -67,7 +67,7 @@ interface ICardData {
   club: string
 }
 
-const CardData = {
+const CardData: ICardData = {
   cardName: "Tony",
   price: 500,
   power: 300,
@@ -89,7 +89,7 @@ const getNameByCardData = (_cData: any) => {
   return _cData.cardName
 }
 
-export const CardMockData = [
+export const CardMockData: ICardData[] = [
   {
     cardName: "Tony",
     price: 500,
