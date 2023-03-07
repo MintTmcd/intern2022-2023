@@ -5,13 +5,13 @@
     ? arrow function generic if you want to use -> https://timmousk.com/blog/typescript-arrow-function-generic
 */
 
-const isActive: any = true
+const isActive: boolean = true
 const isUnActive: string = "false" 
 const price: number = 1.5
 const thb: number = 30.5
 const cardName: string = "Son Heung-Min"  
-const cardNameList: Array<string> = ["Kevin", "Ronaldo"]   
-const randomValue: [string, number, string] = ["Van", 109, "Milner"]  
+const cardNameList: string[] = ["Kevin", "Ronaldo"]   
+const randomValue: Array<string | number> = ["Van", 109, "Milner"]  
 const date1: string = "2022-11-29T09:21:02.967Z" 
 const date2: string = "Tue Nov 29 2022 16:21:02 GMT+0700" 
 const date3: Date = new Date()
@@ -22,6 +22,8 @@ const cardTier: undefined = undefined
 const _unk: unknown = "Kaoru"
 
 type TNum = 10 | 20
+
+const x: TNum = 10
 
 const setFakeMock = () => {
   let fake: number = 10
@@ -51,6 +53,18 @@ const calsPriceToTHB = (_price: number): string => {
 
 function getAge(x: number): number {
   return 60
+}
+
+interface ICardData {
+  cardName: string
+  price: number
+  power: number
+  isActive: boolean
+  position: {
+    short: string
+    full: string
+  }
+  club: string
 }
 
 const CardData = {
